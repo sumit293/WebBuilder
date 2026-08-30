@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import LoginModal from "../components/LoginModal";
 
 function Home() {
 
@@ -16,7 +17,10 @@ function Home() {
             title:"Responsive Layout",
             description:"Ensure your website looks great on all devices."
         }
-    ];
+    ]
+
+    const [openLogin, setOpenLogin] = React.useState(false);
+
 
 
 
@@ -46,7 +50,9 @@ function Home() {
         Pricing
       </div>
 
-      <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px]">
+      <button className='relative inline-flex h-12 overflow-hidden rounded-full p-[1px]'
+        onClick={() => setOpenLogin(true)}
+      > 
         
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
@@ -137,6 +143,8 @@ function Home() {
 <footer className="relative z-10 py-6 px-6 text-center text-sm text-zinc-400 border-amber-50/10 border-t backdrop-blur-md bg-black/20">
     &copy; {new Date().getFullYear()} GenWeb.ai. All rights reserved.
 </footer>
+{openLogin && <LoginModal open={openLogin} onClose={() => setOpenLogin(false)} />}
+
     </div>
   );
 }
