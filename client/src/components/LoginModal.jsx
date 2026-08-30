@@ -61,8 +61,28 @@ onClick={onClose}
   <span>Continue with Google</span>
 </motion.button>
 
-    </div>
 
+<div className="flex items-center gap-4 my-6">
+  <div className="flex-1 h-px bg-zinc-700"></div>
+
+  <span className="text-xs font-medium text-zinc-400 whitespace-nowrap">
+    Secure Login
+  </span>
+
+  <div className="flex-1 h-px bg-zinc-700">
+</div>
+</div>
+    </div>
+<p className="text-xs text-center p-10 text-zinc-500 leading-relaxed">
+  By continuing, you agree to our{" "}
+  <span className="underline cursor-pointer hover:text-zinc-300">
+    Terms of Service
+  </span>{" "}
+  and{" "}
+  <span className="underline cursor-pointer hover:text-zinc-300">
+    Privacy Policy
+  </span>
+</p>
     </div>
 
 </motion.div>
