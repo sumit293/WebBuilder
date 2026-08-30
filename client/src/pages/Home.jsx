@@ -31,6 +31,8 @@ function Home() {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#000000] to-[#120349] z-0" />
 
+
+
       {/* Navbar */}
      <motion.nav
   initial={{ y: -40, opacity: 0 }}
@@ -108,7 +110,7 @@ function Home() {
 
 <section className="relative z-10 max-w-7xl mx-auto px-6 pb-32 pt-32">
 
-  <div className="grid md:grid-cols-3 gap-6">
+  <div className="grid md:grid-cols-3 gap-6 p-5">
 
     {highLights.map((h, i) => (
       <motion.div
